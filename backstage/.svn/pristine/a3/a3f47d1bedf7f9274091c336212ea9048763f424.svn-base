@@ -1,0 +1,138 @@
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+
+audio:not([controls]) { display: none; height: 0; }
+
+[hidden], template { display: none; }
+
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+html { font-family: sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body { margin: 0; }
+
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+a { background: transparent; }
+
+a:active, a:hover { outline: 0; }
+
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+mark { background: #ff0; color: #000; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+img { border: 0; }
+
+svg:not(:root) { overflow: hidden; }
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+figure { margin: 1em 40px; }
+
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+
+pre { overflow: auto; }
+
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
+
+button { overflow: visible; }
+
+button, select { text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
+
+button[disabled], html input[disabled] { cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+input { line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
+
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+legend { border: 0; padding: 0; }
+
+textarea { overflow: auto; }
+
+optgroup { font-weight: bold; }
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+table { border-collapse: collapse; border-spacing: 0; }
+
+td, th { padding: 0; }
+
+* { box-sizing: border-box; }
+
+body { background: #f5f5f5; font-size: 12px; font-family: "Microsoft YaHei"; }
+
+a { color: #193249; text-decoration: none; }
+
+ul, li { list-style: none; }
+
+dl, dt, dd, ul, li { padding: 0; margin: 0; }
+
+button { border: none; outline: none; }
+
+.clearfix { *zoom: 1; }
+.clearfix:after { content: ""; display: table; clear: both; }
+
+input { outline: none; }
+
+.selectbox { display: inline-block; float: left; }
+
+.maincontent { width: 1200px; margin: 0px auto; }
+
+header { height: 227px; }
+header .headBar { height: 80px; background: #fff; }
+header .headBar .headCont { width: 1200px; margin: 0px auto; }
+header .headBar .headCont .logo { float: left; margin-top: 12px; }
+header .headBar .headCont .logo span { float: right; font-size: 30px; color: #333333; margin: 10px 0px 0px 25px; font-weight: bold; }
+header .headBar .headCont .title { width: 360px; float: left; font-size: 24px; text-align: center; line-height: 80px; margin-left: 120px; }
+header .headBar .headCont .login { width: 112px; height: 77px; float: right; border-top: 3px solid #fff; background: url("../images/icons/down.png") no-repeat left; background-position: 80px 35px; }
+header .headBar .headCont .login .user { width: 40px; height: 40px; background: #616b88 url("../images/icons/login.png") no-repeat center; border-radius: 40px; margin: 20px 10px 0px 26px; }
+header .headBar .headCont .login:hover { border-top: 3px solid #616b88; background: url("../images/icons/down_hover.png") no-repeat left; background-position: 80px 35px; }
+header .headBar .headCont .login .list { position: relative; margin-top: 17px; background: #fff; z-index: 99; display: none; }
+header .headBar .headCont .login .list li { font-size: 12px; text-align: center; cursor: pointer; }
+header .headBar .headCont .login .list li:hover { background: #dfe5ea; }
+header .headBar .headCont .login .list li a { color: #9aacb9; }
+header .headBar .headCont .login .list li a:hover { color: #616b88; }
+header .headBar .headCont .login .list li .libar { width: 80px; height: 35px; line-height: 35px; margin: 0px auto; border-top: 1px solid #dfe5ea; }
+header .headBar .headCont .login .list li:first-child .libar { border-top: none; }
+header .headBar .searchBar { width: 1200px; margin: 0px auto; height: 130px; background: url("../images/bg.png") no-repeat; }
+header .headBar .searchBar .searchBg { width: 1200px; float: left; margin-top: 45px; }
+header .headBar .searchBar .searchBg .search { width: 500px; height: 40px; background: #fff; border-radius: 40px; margin: 0px auto; }
+header .headBar .searchBar .searchBg .search .inputCss { float: left; width: 430px; height: 40px; border: 0; padding: 0px 10px; line-height: 40px; display: inline-block; margin-left: 20px; }
+header .headBar .searchBar .searchBg .search .btn { width: 28px; height: 40px; float: left; background: url("../images/icons/search.png") no-repeat center; }
+
+footer { width: 100%; height: 60px; position: fixed; background: #84929f; bottom: 0px; }
+footer .footBar { width: 1200px; margin: 0px auto; }
+footer .footBar p { float: left; text-align: left; line-height: 30px; color: #fff; }
+footer .footBar .footList { float: right; }
+footer .footBar .footList li { float: left; padding-left: 20px; line-height: 60px; color: #fff; }
+footer .footBar .footList li a { color: #fff; }

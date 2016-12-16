@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单管理</title>
+    <link rel="stylesheet" href="js/plugins/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/order.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/jquery.selectbox/jquery.selectBox.min.js"></script>
+    <script src="js/plugins/datetimepicker/jquery.datetimepicker.min.js"></script>
+    <script src="js/order.js"></script>
+    <script  src="js/vue-nav.js"></script>
+</head>
+<body>
+<div class="pad15">
+    <div class="main">
+        <!--top-->
+        <div class="top normal_block">
+            <div class="normal_block_title">订单管理</div>
+            <ul class="clearfix">
+                <li>
+                    <p>昨日新增订单</p>
+                    <p><span>512</span>单</p>
+                </li>
+                <li>
+                    <p>总订单量</p>
+                    <p><span>12345</span>单</p>
+                </li>
+                <li>
+                    <p>昨日销售金额</p>
+                    <p><span>34566</span>元</p>
+                </li>
+                <li>
+                    <p>总销售额</p>
+                    <p><span>888888</span>元</p>
+                </li>
+            </ul>
+        </div>
+        <!--mid-->
+        <dl class="order_tips normal_block">
+            <dd class="buyer clearfix">
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">购买者</option>
+                    <option value="1">订单编号</option>
+                    <option value="2">资源名称</option>
+                </select>
+                <input type="text" class="buyer_write">
+            </dd>
+            <dd class="buy_time clearfix">
+                <label>购买时间</label>
+                <div class="fl">
+                    <input type="text" id="dates_start1" name="dates_start1" value="" placeholder="请选择起始时间">
+                    <span>至</span>
+                    <input type="text" id="dates_end1" name="dates_end1" value="" placeholder="请选择结束时间">
+                </div>
+            </dd>
+            <dd class="clearfix">
+                <label>订单状态</label>
+                <ul class="wrap_status fl list_tabs">
+                    <li class="cur">全部</li>
+                    <li>已付款</li>
+                    <li>待付款</li>
+                    <li>已取消</li>
+                </ul>
+            </dd>
+            <dd class="clearfix">
+                <label>版权状态</label>
+                <ul class="wrap_status fl list_tabs">
+                    <li class="cur">全部</li>
+                    <li>无期限</li>
+                    <li>有期限</li>
+                    <li>已到期</li>
+                </ul>
+            </dd>
+            <dd class="wrap_btns clearfix">
+                <ul>
+                    <li>搜索订单</li>
+                    <li>批量导出</li>
+                </ul>
+            </dd>
+        </dl>
+        <!--bottom-->
+        <dl class="bottom">
+            <dd class="wrap_table">
+                <table class="table table-striped fixed-width">
+                    <thead>
+                        <tr>
+                            <th width="6%">编号</th>
+                            <th width="16%">订单编号</th>
+                            <th width="16%">资源名称</th>
+                            <th width="7%">距版权到期</th>
+                            <th >购买者</th>
+                            <th width="8%">购买时间</th>
+                            <th width="7%">资源价格（元）</th>
+                            <th width="6%">订单状态</th>
+                            <th width="8%">支付时间</th>
+                            <th width="6%">支付方式</th>
+                            <th width="6%">是否下载</th>
+                            <th width="6%">备注</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>000000001</td>
+                            <td>201612127479572975320852085</td>
+                            <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                            <td>523天</td>
+                            <td>15881888888</td>
+                            <td>2016/12/12 20:21</td>
+                            <td>2.11</td>
+                            <td>已支付</td>
+                            <td>2016/12/12 20:21</td>
+                            <td>支付宝付款</td>
+                            <td>是</td>
+                            <td>版本过期</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <!--<div id="app" class="page">-->
+                <!--<vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>-->
+            <!--</div>-->
+            <div id="app" class="page">
+                <div class="wrap_page_l">
+                    <a href="#" class="btn-normal mt15" style="display: none">批量取消</a>
+                    <div class="page_tips">共{{total_count}}条记录,{{cur}}/{{all}}页</div>
+                </div>
+                <vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>
+            </div>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

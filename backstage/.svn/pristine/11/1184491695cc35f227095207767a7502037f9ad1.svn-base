@@ -1,0 +1,44 @@
+body { padding: 0 16px; min-width: 1024px; }
+
+.title { line-height: 40px; }
+
+.resocProp { width: 100%; padding: 16px; background: #E0E5EB; }
+.resocProp .resocImg { width: 200px; height: 148px; line-height: 148px; background: #616A87; margin-right: 16px; float: left; text-align: center; }
+.resocProp .resocImg a { width: 100px; height: 30px; color: #616b88; font-size: 12px; padding: 0px 10px; border: 1px solid #616b88; border-radius: 30px; line-height: 30px; background: #fff; text-align: center; vertical-align: middle; display: inline-block; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 0; font-size: 14px; }
+.resocProp dl dt { margin: 6px 0 10px 0; }
+.resocProp dl dd { margin-bottom: 10px; font-size: 12px; }
+
+.resocDetail { width: 60%; padding-right: 16px; margin-bottom: 15px; }
+.resocDetail > a { display: block; float: left; width: 78px; height: 28px; color: #193249; font-size: 12px; padding: 0px 10px; border: 1px solid #DBDBDB; line-height: 28px; background: #fff; text-align: center; vertical-align: middle; display: inline-block; font-size: 14px; }
+.resocDetail > a:first-child { border-right: none 0; }
+.resocDetail > a.active { background: #616b88; color: #fff; }
+.resocDetail ul { float: right; font-size: 12px; }
+.resocDetail ul li { float: left; line-height: 28px; margin-right: 18px; }
+.resocDetail ul li a { color: #3899DA; text-decoration: underline; }
+
+.resocVideo { width: 100%; }
+.resocVideo .videoboxSm { float: left; width: 60%; padding-right: 16px; }
+.resocVideo .videoboxSm div.video { width: 100%; height: 490px; background: #947988; }
+.resocVideo .videoboxLg { float: right; width: 40%; }
+.resocVideo .videoboxLg ul.videoDetail { background: #E0E5EB; padding: 8px 16px; margin-bottom: 16px; }
+.resocVideo .videoboxLg ul.videoDetail li { margin-bottom: 16px; }
+.resocVideo .videoboxLg ul.videoDetail li div { display: inline-block; }
+.resocVideo .videoboxLg ul.videoDetail li div.list { width: 60%; float: left; }
+.resocVideo .videoboxLg ul.videoDetail li div.time { margin-right: 70px; }
+.resocVideo .videoboxLg ul.videoDetail li span { display: inline-block; width: 70px; }
+.resocVideo .videoboxLg ul.videoDetail li span.listTil { float: left; }
+.resocVideo .videoboxLg ul.videoDetail li span.mR { width: auto; margin-right: 28px; }
+.resocVideo .videoboxLg ul.videoDetail li span.mRsm { width: auto; margin-right: 14px; }
+.resocVideo .videoboxLg ul.videoDetail li input[type="radio"] { margin: 0 6px 0 2px; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list { width: 70%; float: left; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li:first-child { margin-top: 0; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li span { width: 50px; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li input[type="radio"] { margin: 0 6px; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li input[type="text"] { width: 92px; height: 28px; border: 0; padding: 0px 10px; line-height: 28px; display: inline-block; border: 1px solid #DBDBDB; margin-right: 6px; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li div.mL { display: inline-block; margin: 16px 0 0 89px; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li a.setTime { padding-left: 24px; color: #3899da; background: url("../images/settime.png") no-repeat left center; }
+.resocVideo .videoboxLg ul.videoDetail li ul.list li a.setTime span { width: auto; font-size: 12px; color: #193249; }
+.resocVideo .videoboxLg ul.videoDetail li label { display: inline-block; width: 60px; }
+
+.btn { width: 60%; padding-right: 16px; text-align: center; margin-bottom: 16px; }
+.btn button { width: 80px; height: 30px; color: #616b88; font-size: 12px; padding: 0px 10px; border: 1px solid #616b88; border-radius: 30px; line-height: 30px; background: #616b88; text-align: center; vertical-align: middle; display: inline-block; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; color: #fff; margin: 0 5px; }

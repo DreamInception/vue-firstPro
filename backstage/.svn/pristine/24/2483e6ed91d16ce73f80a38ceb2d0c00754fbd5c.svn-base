@@ -1,0 +1,207 @@
+@import "config";
+@import "compass";
+$bg-color:#fff;
+$text-color: #666;
+$border-color:#d2d2d2;
+@import "table";
+@import "page";
+@import "selectbox";
+
+.pad15{
+  padding: 0 15px;
+}
+.w_100{
+  width: 100%;
+}
+
+@mixin btn($buttonWidth:80px,$buttonHeight:30px,$bg:$mainColor,$fC:$mainColor){
+  width:$buttonWidth;
+  height:$buttonHeight;
+  background: $bg;
+  color:$fC;
+  font-size: 14px;
+  line-height:$buttonHeight;
+  text-align: center;
+  border-radius: 3px;
+  display: block;
+  float: left;
+  cursor: pointer;
+}
+.main{
+  font-size: 12px;
+  color: #666;
+  width: 100%;
+  margin: 0 auto ;
+}
+.normal_block{
+  padding: 10px 17px;
+  background: #fff;
+  margin-bottom: 17px;
+  .normal_block_title{
+    line-height: 28px;
+    margin-bottom: 7px
+  }
+}
+//.title_big{
+//  padding: 3px 17px;
+//  font-size: 14px;
+//  font-weight: normal;
+//}
+.top{
+  ul{
+    margin-left: -74px;
+    li{
+      width: 160px;
+      height: 85px;
+      background: #f2f6f9;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 5px 0 0;
+      float: left;
+      margin-left: 74px;
+      p{
+        padding-bottom: 5px;
+        span{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+.w_big{
+  font-size: 24px;
+}
+.fl{
+  float: left;
+}
+.order_tips{
+  dd{
+    margin: 15px 0;
+    label{
+      float: left;
+      width: 64px;
+      line-height: 27px;
+    }
+    .wrap_status{
+      li{
+        float: left;
+        padding: 7px 9px;
+        &.cur{
+          background: #d5dbe8;
+        }
+      }
+    }
+    &.buyer{
+      .selectbox{
+        height: 26px;
+        line-height: 26px;
+        float: left;
+        border-radius: 0;
+        .selectbox_value{
+          font-size: 12px;
+        }
+      }
+      .buyer_write{
+        float: left;
+        width: 390px;
+        height: 28px;
+        border:1px solid $borderColor;
+        border-left:none;
+        padding: 0 5px;
+      }
+    }
+    &.buy_time{
+      input{
+        width: 143px;
+        height: 28px;
+        border: 1px solid $borderColor;
+        box-sizing: border-box;
+        padding: 0 5px 0 12px;
+        background: url(../images/date.png) no-repeat 117px 2px;
+        display: inline-block;
+      }
+      span{
+        margin: 0 10px;
+      }
+    }
+    &.wrap_btns{
+      ul{
+        margin-left:350px;
+        li{
+          @include btn(80px,30px,#8793b2,$whiteColor);
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
+.bottom{
+  padding-bottom: 30px;
+  background: #fff;
+}
+.wrap_table{
+  width:100%;
+  overflow: scroll;
+  height: auto;
+  .fixed-width{
+    min-width: 1387px;
+    td{
+      line-height: 1.4em;
+    }
+  }
+}
+.selectbox_list{
+  width: 122px;
+  top:26px
+}
+.selectbox_body{
+  li{
+    font-size: 12px;
+  }
+}
+.standard-dropdown{
+  float: left;
+}
+.selectBox{
+  width: 120px!important;
+  height: 28px!important;
+  line-height: 18px;
+}
+.selectBox-label{
+  width: 120px!important;
+
+}
+.btn-normal{
+  @include btn(80px,30px,#8793b2,$whiteColor);
+}
+.ml15{
+  margin-left: 15px;
+  border-left:1px solid $borderColor!important; ;
+}
+.title_big{
+  font-size: 14px;
+  line-height: 2em;
+}
+.resetBorder{
+  border-left: 1px solid $borderColor!important;
+  margin-left: 0!important;
+  margin-right: 15px;
+}
+.list_select{
+  .selectBox{
+    float: left;
+    margin-right: 15px;
+  }
+}
+.recommend_tips{
+  dd{
+    margin: 20px 0;
+  }
+}
+.wrap_page_l{
+  float: left;
+  width: 130px;
+  .page_tips{
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资源属性</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/resource.css">
+</head>
+<body>
+<span class="title">资源属性</span>
+<div class="resocProp clearfix">
+    <div class="resocImg">
+        <a href="#">单击更改封面</a>
+    </div>
+    <dl>
+        <dt>河南省洛阳地区2014-2016年八年级上学期期中考试语文。</dt>
+        <dd>资源描述：河南省洛阳地区2014-2016年八年级上学期期中考试语文河南省洛阳地区2014-2016年八年级上学期期中考试语文河南省洛阳地区2014-2016年八年级上学期期中考试语文河南省洛阳地区2014-2016年八年级上学期期中考试语文</dd>
+        <dd>资源作者：河南省</dd>
+        <dd>作者简介：河南省洛阳地区2014-2016年八年级上学期期中考试语文河南省洛阳地区2014-2016年八年级上学期期中考试语文河南省洛阳地区2014-2016年八年级上学期期中考试语文河南省洛阳地区2014-2016年八年级上学期期中考试语文</dd>
+    </dl>
+</div>
+<span class="title">资源详情</span>
+<div class="resocDetail clearfix">
+    <a href="#" class="active">正式文件</a>
+    <a href="#">小样文件</a>
+    <ul>
+        <li><a href="#">更改正式文件</a></li>
+        <li><a href="#">更改小样文件</a></li>
+        <li><a href="#">下载正式文件</a></li>
+        <li><a href="#">下载正式文件</a></li>
+    </ul>
+</div>
+<div class="resocVideo clearfix">
+    <div class="videoboxSm">
+        <div class="docum">
+            <span>研究结论</span>
+            <p>直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。
+                <br>直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。
+            </p>
+            <p>直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。
+                <br>直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。直播平台的运营以优质内容为中心，签约明星主播，直播电竞赛事，邀约明星主播是常用手段。
+            </p>
+        </div>
+    </div>
+    <div class="videoboxLg">
+        <ul class="videoDetail">
+            <li><div class="time"><span>上传<span class="mRsm">者</span>：</span>张三</div><span>上传时间：</span>2016-12-12</li>
+            <li><span>资源大小：</span>20G</li>
+            <li class="clearfix"><span class="listTil">资源属性：</span><div class="list">初中>化学>北师大版>七年级上册第一张几何与函数概念>1.1集合>1.1.1有理数加减>1.1.2相反数</div></li>
+            <li><span>知识<span class="mRsm">点</span>：</span>数与式>有理数>正数与附负数>正数</li>
+            <li><span>资源类别：</span>课件>教学视频</li>
+            <li><span><span class="mR">时</span>长：</span>100分钟</li>
+            <li><span>使用对象：</span>学生</li>
+            <li><span>资源来源：</span>北京师范大学出版社</li>
+            <li><span>版权期限：</span>永久</li>
+            <li><span>独家资源：</span>是</li>
+            <li><span>原创资源：</span>是</li>
+            <li><span><span class="mR">文</span>种：</span>中文</li>
+        </ul>
+        <ul class="videoDetail">
+            <li>
+                <span>资源等级</span>
+                <input type="radio" id="gradeJ" name="grade"><label for="gradeJ">精品</label>
+                <input type="radio" id="gradeP" name="grade"><label for="gradeP">普通</label>
+            </li>
+            <li class="clearfix">
+                <span  class="listTil">价格</span>
+                <ul class="list">
+                    <li><input type="radio" id="free" name="fr"><label for="free">免费</label></li>
+                    <li>
+                        <input type="radio" id="charge" name="fr"><label for="charge">收费</label>
+                        <span>原价</span><input type="text" name="oldPrice">元
+                        <div  class="mL"><span>折扣价</span><input type="text" name="discount">元</div>
+                    </li>
+                    <li>
+                        <input type="radio" id="chargeX" name="fr"><label for="chargeX">限时免费</label>
+                        <span>原价</span><input type="text" name="oldPrice">元
+                    </li>
+                    <li>
+                        <!--<a class="setTime" href="#">请设置时间</a>-->
+                        <a class="setTime" href="#"><span>2016/12/12 19:00 至 2016/12/12 19:00</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span>电子教材</span>
+                <input type="radio" id="yes" name="if"><label for="yes">是</label>
+                <input type="radio" id="no" name="if"><label for="no">否</label>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="btn">
+    <button>发布</button>
+    <button>返回</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+$(document).ready(function(){
+	initpage();
+	initNav();
+	forUserName();
+	$(".arrow").click(function(){
+		$(".maincontent").toggleClass("switch");
+		if($(".maincontent").hasClass("switch")){
+			$(".arrow").html("&gt;");
+		}
+		else{
+			$(".arrow").html("&lt;");
+		}
+	});
+	$(".nav>li").each(function () {
+		$(this).css("background","url("+$(this).attr("data-bg")+")");
+	})
+});
+window.onresize = function(){
+	initpage();
+};
+function initpage() {
+	$(".maincontent,.left").height($(window).height()-$(".header").height()+10);
+	$(".right").height($(window).height()-$(".header").height()+10);
+}
+function forUserName() {
+	var screenWidth = window.screen.width;
+	if(screenWidth<1280){
+		$(".login_user_name").addClass("small_width");
+	}
+}
+function initNav() {
+	$.ajax({
+		url: "json/nav.json",
+		type: "get",
+		dataType: "json"
+	}).done(function(data){
+		var listData = data.data.menuList;
+		new Vue({
+			el: ".navList",
+			data: {
+				listData : listData
+			}
+		});
+		//点击nav
+		// $("body").on("click",".nav>li",function(){
+		// 	$(".nav>li").find("li").removeClass("shown");
+		// 	$(this).find("li").addClass("shown");
+		// 	$(".nav>li").each(function () {
+		// 		$(this).find("div").css("background","").removeClass("shadow");
+		// 	});
+		// 	$(this).find("div").css("background","").css("background","#e3e6ee url("+$(this).attr("data-hoverbg")+")  no-repeat 15px 15px");
+		// });
+		// $(".nav").on("click","li li",function(){
+		// 	$(".nav li li").removeClass("selected");
+		// 	$(this).addClass("selected");
+		// });
+
+	});
+}
+
+

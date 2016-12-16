@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>后台管理-首页</title>
+    <!--<base href="/backstage/admin/"/>-->
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/resource-manage.css">
+    <link rel="stylesheet" href="js/plugins/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="js/plugins/selectBox/jquery.selectbox.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/selectBox/jquery.selectbox.js"></script>
+    <script src="js/resource-manage.js"></script>
+    <script src="js/vuePage.js"></script>
+    <script src="js/plugins/datetimepicker/jquery.datetimepicker.min.js"></script>
+
+</head>
+<body class="out-padding">
+<article class="resource-manage-container" id="resource-manage-container" v-cloak>
+    <ul class="choose-tabs clearfix">
+        <li><a href="javascript:;" class="default-tab active-tab">全部</a></li>
+        <li><a href="javascript:;" class="default-tab">已发布</a></li>
+        <li><a href="javascript:;" class="default-tab">待发布</a></li>
+        <li><a href="javascript:;" class="default-tab">已下架</a></li>
+        <li><a href="javascript:;" class="default-tab">已推荐</a></li>
+    </ul>
+    <section class="first-select-section clearfix">
+        <div class="selectbox selebar selectbox_width120 f-fl">
+            <input name="" value="" type="hidden">
+            <div class="selectbox_arraw"><span class="selectbox_down">▲</span><span class="selectbox_up">▼</span></div>
+            <div class="selectbox_value_box"><div class="selectbox_value">全部</div></div>
+            <div class="selectbox_list selectbox_width120">
+                <div class="selectbox_scroll_body">
+                    <div class="selectbox_scroll"><div></div></div>
+                </div>
+                <ul class="selectbox_body">
+                    <li data-value="0">所有</li>
+                </ul>
+            </div>
+        </div>
+
+        <input type="text" class="search-box f-fl" placeholder="请输入搜索的内容"/>
+        <button class="search-btn f-fl">搜索</button>
+    </section>
+    <section class="second-select-section">
+        <ul>
+            <li class="clearfix ssl">
+                <span class="dl-mgl f-fl">学段选择</span>
+
+                <div class="selectbox selebar selectbox_width120 f-fl">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down">▲</span><span class="selectbox_up">▼</span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">请选择</div></div>
+                    <div class="selectbox_list selectbox_width120">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">所有</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="f-fl">版本</span>
+
+                <div class="selectbox selebar selectbox_width120 f-fl">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down">▲</span><span class="selectbox_up">▼</span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">请选择</div></div>
+                    <div class="selectbox_list selectbox_width120">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">所有</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="f-fl">年级</span>
+
+                <div class="selectbox selebar selectbox_width120 f-fl">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down">▲</span><span class="selectbox_up">▼</span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">请选择</div></div>
+                    <div class="selectbox_list selectbox_width120">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">所有</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix ssl">
+                <span class="dl-mgl f-fl">学科选择</span>
+
+                <div class="selectbox selebar selectbox_width120 f-fl">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down">▲</span><span class="selectbox_up">▼</span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">请选择</div></div>
+                    <div class="selectbox_list selectbox_width120">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">所有</li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="dl-mgl f-fl">册次</span>
+
+                <div class="selectbox selebar selectbox_width120 f-fl">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down">▲</span><span class="selectbox_up">▼</span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">请选择</div></div>
+                    <div class="selectbox_list selectbox_width120">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">所有</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="clearfix ssl">
+                <span class="dl-mgl f-fl">时间设置</span>
+                <input type="text" id="dates_start1" name="dates_start1" class="dateInput f-fl" value="" placeholder="请选择起始时间">
+                <span class="f-fl">至</span>
+                <input type="text" id="dates_end1" name="dates_end1" class="dateInput f-fl" value="" placeholder="请选择结束时间">
+                <button class="check-btn f-fl">查询</button>
+            </li>
+        </ul>
+    </section>
+    <section class="third-select-section">
+        <span>排序</span>
+        <ul class="clearfix">
+            <li>
+                <span>价格</span>
+                <a href="javascript:;" :class="{'asc-enabled': priceAscClick,'asc-disabled': !priceAscClick}" @click="sortItems('price')"></a>
+                <a href="javascript:;" :class="{'desc-enabled': priceDescClick,'desc-disabled': !priceDescClick}" @click="sortItems('price')"></a>
+            </li>
+            <li>
+                <span>评分</span>
+                <a href="javascript:;" :class="{'asc-enabled': gradeAscClick,'asc-disabled': !gradeAscClick}" @click="sortItems('grade')"></a>
+                <a href="javascript:;" :class="{'desc-enabled': gradeDescClick,'desc-disabled': !gradeDescClick}" @click="sortItems('grade')"></a>
+            </li>
+            <li>
+                <span>下载</span>
+                <a href="javascript:;" :class="{'asc-enabled': downAscClick,'asc-disabled': !downAscClick}" @click="sortItems('download')"></a>
+                <a href="javascript:;" :class="{'desc-enabled': downDescClick,'desc-disabled': !downDescClick}" @click="sortItems('download')"></a>
+            </li>
+            <li>
+                <span>浏览</span>
+                <a href="javascript:;" :class="{'asc-enabled': browseAscClick,'asc-disabled': !browseAscClick}" @click="sortItems('browse')"></a>
+                <a href="javascript:;" :class="{'desc-enabled': browseDescClick,'desc-disabled': !browseDescClick}" @click="sortItems('browse')"></a>
+            </li>
+            <button class="select-free-resource">筛选免费资源</button>
+        </ul>
+    </section>
+<section class="bottom">
+        <div class="wrap_table">
+            <table class="table-data table-striped" cellspacing="0" cellpadding="0">
+                <thead>
+                <tr>
+                    <th width="1.68%">
+                        <input type="checkbox" class="radio-box" name="resource-cb"/>
+                    </th>
+                    <th width="4.2%">编号</th>
+                    <th width="12%">资源名称</th>
+                    <th width="4.2%">所属学段</th>
+                    <th width="4.2%">所属学科</th>
+                    <th width="4.2%">资源类型</th>
+                    <th width="4.2%">资源格式</th>
+                    <th width="4.2%">版权</th>
+                    <th width="4.2%">版本</th>
+                    <th width="4.2%">年级册次</th>
+                    <th width="4.2%">作者</th>
+                    <th width="4.2%">上传者</th>
+                    <th width="4.2%">上传时间</th>
+                    <th width="4.2%">单价（元）</th>
+                    <th width="4.2%">累计收益（元）</th>
+                    <th width="4.2%">评分</th>
+                    <th width="4.2%">浏览量</th>
+                    <th width="4.2%">下载量</th>
+                    <th width="4.2%">状态</th>
+                    <th width="4.2%">推荐状态</th>
+                    <th width="10.5%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" class="radio-box" name="resource-cb"/>
+                    </td>
+                    <td>223</td>
+                    <td>33</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <button class="batch-remove-button">批量删除</button>
+        <button class="batch-off-button">批量下架</button>
+
+        <div id="app" class="page">
+            <div class="wrap_page_l">
+                <a href="#" class="btn-normal mt15" style="display: none">批量取消</a>
+                <div class="page_tips">共{{total_count}}条记录,{{cur}}/{{all}}页</div>
+            </div>
+            <vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>
+        </div>
+    </section>
+</article>
+
+
+</body>
+</html>

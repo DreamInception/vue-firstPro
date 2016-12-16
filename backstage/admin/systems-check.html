@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>权限管理查看</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/systems.css">
+</head>
+<body>
+<article id="webbar">
+    <div class="tab clearfix">
+        <ul>
+            <li><a href="#">用户管理</a></li>
+            <li><a href="#" class="active">权限管理</a></li>
+            <li><a href="#">操作日志</a></li>
+        </ul>
+    </div>
+    <div class="tab">
+        <div class="linebar clearfix">
+            <label class="lab">角色名称</label>
+            <input type="text" name="rolename" value="" class="inpclass">
+        </div>
+        <div class="linebar mbottom clearfix">
+            <label class="lab">角色描述</label>
+            <input type="text" name="roledes" value="" class="inpclass">
+        </div>
+    </div>
+    <div class="tab">
+        <div class="systitle">权限设置</div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-res-item" id="checkall" class="checkclass"><label for="checkall">资源管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li><input type="checkbox" name="res-check" id="check01" class="check"><label for="check01">查看</label></li>
+                    <li><input type="checkbox" name="res-intr" id="check02" class="check"><label for="check02">发布</label></li>
+                    <li><input type="checkbox" name="res-edit" id="check03" class="check"><label for="check03">编辑</label></li>
+                    <li><input type="checkbox" name="res-from" id="check04" class="check"><label for="check04">下架</label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-user-item" id="checkall01" class="checkclass"><label for="checkall01">用户管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li><input type="checkbox" name="user-check" id="checkuser01" class="check"><label for="checkuser01">查看</label></li>
+                    <li><input type="checkbox" name="user-forbidden" id="checkuser02" class="check"><label for="checkuser02">禁用</label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-order-item" id="checkall02" class="checkclass"><label for="checkall02">订单管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li><input type="checkbox" name="order-edit" id="checkorder01" class="check"><label for="checkorder01">编辑</label></li>
+                    <li><input type="checkbox" name="order-leading" id="checkorder02" class="check"><label for="checkorder02">导出</label></li>
+                    <li><input type="checkbox" name="order-send" id="checkorder03" class="check"><label for="checkorder03">发稿</label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-word-item" id="checkall03" class="checkclass"><label for="checkall03">字典管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li class="checkwidth">
+                        <input type="checkbox" name="screen-admin" id="checkmask" class="check"><label for="checkmask">屏蔽词管理</label>
+                        <ul class="masklist">
+                            <li><input type="checkbox" name="word-add" id="checkmask01" class="check"><label for="checkmask01">添加</label></li>
+                            <li><input type="checkbox" name="word-edit" id="checkmask02" class="check"><label for="checkmask02">编辑</label></li>
+                            <li><input type="checkbox" name="word-del" id="checkmask03" class="check"><label for="checkmask03">删除</label></li>
+                        </ul>
+                    </li>
+                    <li class="checkwidth">
+                        <input type="checkbox" name="search-admin" id="checksearch" class="check"><label for="checksearch">搜索词管理</label>
+                        <ul class="masklist">
+                            <li><input type="checkbox" name="search-infor" id="checksearch01" class="check"><label for="checksearch01">推荐</label></li>
+                            <li><input type="checkbox" name="search-del" id="checksearch02" class="check"><label for="checksearch02">删除</label></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-comment-item" id="checkall04" class="checkclass"><label for="checkall04">评论管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li><input type="checkbox" name="comment-edit" id="checkword01" class="check"><label for="checkword01">编辑</label></li>
+                    <li><input type="checkbox" name="comment-leading" id="checkword02" class="check"><label for="checkword02">导出</label></li>
+                    <li><input type="checkbox" name="comment-send" id="checkword03" class="check"><label for="checkword03">发稿</label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-recommend-item" id="checkall05" class="checkclass"><label for="checkall05">推荐管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li class="checkwidth">
+                        <input type="checkbox" name="res-rel-infor" id="checkres" class="check"><label for="checkres">资源推荐</label>
+                        <ul class="masklist">
+                            <li><input type="checkbox" name="res-relat-edit" id="checkres01" class="check"><label for="checkres01">编辑</label></li>
+                            <li><input type="checkbox" name="res-relat-edit" id="checkres02" class="check"><label for="checkres02">删除</label></li>
+                        </ul>
+                    </li>
+                    <li class="checkwidth">
+                        <input type="checkbox" name="rel-infor" id="checkrelate" class="check"><label for="checkrelate">相关推荐</label>
+                        <ul class="masklist">
+                            <li><input type="checkbox" name="relate-infor" id="checkrelate01" class="check"><label for="checkrelate01">推荐</label></li>
+                            <li><input type="checkbox" name="relate-edit" id="checkrelate02" class="check"><label for="checkrelate02">删除</label></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-count-item" id="checkall06" class="checkclass"><label for="checkall06">统计分析</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li class="checkwidth">
+                        <input type="checkbox" id="checkcount" class="check"><label for="checkcount">订单统计</label>
+                    </li>
+                    <li class="checkwidth">
+                        <input type="checkbox" id="checkuser" class="check"><label for="checkuser">用户统计</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="conbar">
+            <div class="checkbar">
+                <input type="checkbox" name="check-power-item" id="checkall07" class="checkclass"><label for="checkall07">权限管理</label>
+            </div>
+            <div class="subbar clearfix">
+                <ul>
+                    <li class="checkwidth">
+                        <input type="checkbox" id="checkpower01" class="check"><label for="checkpower01">用户管理</label>
+                    </li>
+                    <li class="checkwidth">
+                        <input type="checkbox" id="checkpower02" class="check"><label for="checkpower02">权限管理</label>
+                    </li>
+                    <li class="checkwidth">
+                        <input type="checkbox" id="checkpower03" class="check"><label for="checkpower03">操作日志</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+</body>
+</html>

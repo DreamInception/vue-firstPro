@@ -1,0 +1,106 @@
+$(function () {
+    var resourcePage = new Vue({
+        el: '#resource-manage-container',
+        data:{
+            cur: 1,
+            all:20,
+            total_count:100,
+            page:'1',
+            priceAscClick: true,
+            priceDescClick: true,
+            gradeAscClick: true,
+            gradeDescClick: true,
+            downAscClick: true,
+            downDescClick: true,
+            browseAscClick: true,
+            browseDescClick: true
+        },
+        components:{
+            'vue-nav': Vnav
+        },
+        methods:{
+            listens:function(data){
+                this.cur=data;
+                this.page=this.cur;
+                // console.log(app.page);
+            },
+            sortItems: function(msg,event){
+                var obj = window.event.target;
+                var vm = this;
+                switch (msg){
+                    case 'price':
+                        if($(obj).hasClass("asc-enabled")){
+                            vm.priceAscClick = false;
+                            vm.priceDescClick = true;
+                        };
+                        if($(obj).hasClass("desc-enabled")){
+                            vm.priceDescClick = false;;
+                            vm.priceAscClick = true;
+                        };
+                        break;
+                    case 'grade':
+                        if($(obj).hasClass("asc-enabled")){
+                            vm.gradeAscClick = false;
+                            vm.gradeDescClick = true;
+                        };
+                        if($(obj).hasClass("desc-enabled")){
+                            vm.gradeDescClick = false;;
+                            vm.gradeAscClick = true;
+                        };
+                        break;
+                    case 'download':
+                        if($(obj).hasClass("asc-enabled")){
+                            vm.downAscClick = false;
+                            vm.downDescClick = true;
+                        };
+                        if($(obj).hasClass("desc-enabled")){
+                            vm.downDescClick = false;;
+                            vm.downAscClick = true;
+                        };
+                        break;
+                    case 'browse':
+                        if($(obj).hasClass("asc-enabled")){
+                            vm.browseAscClick = false;
+                            vm.browseDescClick = true;
+                        };
+                        if($(obj).hasClass("desc-enabled")){
+                            vm.browseDescClick = false;;
+                            vm.browseAscClick = true;
+                        };
+                        break;
+
+                }
+
+            }
+        },
+        mounted: function(){
+            var vm = this;
+
+        }
+    });
+    //»’∆⁄…Ë÷√
+    $('#dates_start1').datetimepicker({
+        //yearOffset:222,
+        lang:'ch',
+        timepicker:false,
+        format:'Y-m-d',
+        formatDate:'Y-m-d',
+    //    minDate:'-1970/01/02', // yesterday is minimum date
+    //    maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+    });
+    $('#dates_end1').datetimepicker({
+        //yearOffset:222,
+        lang:'ch',
+        timepicker:false,
+        format:'Y-m-d',
+        formatDate:'Y-m-d',
+        //minDate:'-1970/01/02', // yesterday is minimum date
+        //maxDate:'+1970/01/02' // and tommorow is maximum date calendar
+    });
+    //tab
+    $(".choose-tabs .default-tab").click(function () {
+        $(".choose-tabs .default-tab").removeClass("active-tab");
+        $(this).addClass("active-tab");
+    })
+
+})

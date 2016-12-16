@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>后台管理-首页</title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/frame.js"></script>
+    <script>
+        var leftUrl="json/nav.json;"
+    </script>
+</head>
+<body>
+    <div class="header clearfix">
+        <!--<div class="logorht">-->
+            <!--<div class="headlist">-->
+                <!--<ul>-->
+                    <!--<li class="name"><a href="#">退出</a></li>-->
+                    <!--<li class="help"><a href="#">管理员</a></li>-->
+                    <!--&lt;!&ndash;<li class="message"><a href="box.html" target="right">消息</a></li>&ndash;&gt;-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="logo"><img src="images/logo.png" alt=""/><span>考勤管理系统</span></div>
+        <div class="headlist">
+            <ul>
+                <li class="name"><a href="#">欢迎您，京师讯飞</a></li>
+                <li class="help"><a href="#">管理员</a></li>
+            <!--<li class="message"><a href="box.html" target="right">消息</a></li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="maincontent">
+        <div class="left">
+            <ul class="nav" v-cloak>
+                <li v-for="item in listData"  :style="{ background: 'url('+ item.bgImage + ')' }" :data-hoverbg="item.hoverImage" :data-bg="item.bgImage">
+                    <div>
+                        <a :href="item.url"  target="right"><span>{{item.name}}</span></a>
+                        <span v-if="item.subnav.length>0" >{{item.name}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="arrow">&lt;</div>
+            <iframe src="#" frameborder="0" scrolling="auto" width="100%" height="100%" name="right" ></iframe>
+        </div>
+    </div>
+</body>
+</html>

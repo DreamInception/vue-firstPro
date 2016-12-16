@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作日志</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/systems.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/jquery.selectbox/jquery.selectBox.min.js"></script>
+    <script src="js/systems-add-user.js"></script>
+</head>
+<body>
+<article id="system-add-user" class="system-add-user">
+    <div class="tab clearfix">
+        <ul>
+            <li><a href="#" class="active">用户管理</a></li>
+            <li><a href="#">权限管理</a></li>
+            <li><a href="#">操作日志</a></li>
+        </ul>
+    </div>
+    <section class="form-section">
+        <fieldset>
+            <label for="username">用户名</label>
+            <input type="text" class="username" id="username"/>
+        </fieldset>
+        <fieldset>
+            <label for="password">默认密码</label>
+            <input type="password" class="password" id="password"/>
+        </fieldset>
+        <fieldset>
+            <label for="role">角色</label>
+            <div class="dropdown" id="role">
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">全部</option>
+                    <option value="1">购买者</option>
+                    <option value="2">订单编号</option>
+                    <option value="4">资源名称</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label for="description">用户描述</label>
+            <input type="text" class="password" id="description"/>
+        </fieldset>
+    </section>
+    <section class="btn-section clearfix">
+        <button class="confirm">确认</button>
+        <button class="reset">取消</button>
+    </section>
+</article>
+</body>
+</html>

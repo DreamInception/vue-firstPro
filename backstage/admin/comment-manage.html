@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>评论管理</title>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/comment-manage.css"/>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/jquery.selectbox/jquery.selectBox.min.js"></script>
+    <script src="js/comment-manage.js"></script>
+</head>
+<body>
+    <div class="search container">
+
+        <div class="content">
+            <div class="btn-group">
+                <div class="dropdown">
+                    <select name="standard-dropdown" class="standard-dropdown wide">
+                        <option value="0" selected="selected">全部</option>
+                        <option value="1">购买者</option>
+                        <option value="2">订单编号</option>
+                        <option value="4">资源名称</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn-group">
+                <input class="inputbox searchbox" type="text" placeholder="请输入搜索内容">
+                <button class="searchbtn">搜索</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-options container">
+        <div class="content">
+            <span class="content-label">排序</span>
+            <div class="btn-group">
+                <a href="#" class="input order-option">
+                    评分
+                    <span class="icon order-group">
+                        <span class="opder-up"></span>
+                        <span class="opder-down"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="input order-option">
+                    时间
+                    <span class="icon order-group desc">
+                        <span class="opder-up"></span>
+                        <span class="opder-down"></span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="table-content container">
+        <div class="scrollable table-wrapper">
+            <table class="table table-striped fixed-width">
+                <thead>
+                    <tr>
+                        <th width="3%">
+                            <input class="check-all" type="checkbox">
+                        </th>
+                        <th width="5%">编号</th>
+                        <th width="20%">评论内容</th>
+                        <th width="20%">资源名称</th>
+                        <th width="5%">评分</th>
+                        <th width="9%">评论时间</th>
+                        <th width="9%">评论用户</th>
+                        <th width="8%">用户状态</th>
+                        <th width="10%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input v-model="selectItem" value="2" class="check-item" type="checkbox">
+                        </td>
+                        <td>000002</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>4.2</td>
+                        <td>2016/10/08 20:20</td>
+                        <td>王嘉佳</td>
+                        <td>已禁用</td>
+                        <td>
+                            <a href="#">删除评论</a>
+                            <a href="#" class="disabled">禁用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input v-model="selectItem" value="3" class="check-item" type="checkbox">
+                        </td>
+                        <td>000003</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>4.2</td>
+                        <td>2016/10/08 20:20</td>
+                        <td>王嘉佳</td>
+                        <td>已禁用</td>
+                        <td>
+                            <a href="#">删除评论</a>
+                            <a href="#">禁用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input v-model="selectItem" value="4" class="check-item" type="checkbox">
+                        </td>
+                        <td>000004</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>4.2</td>
+                        <td>2016/10/08 20:20</td>
+                        <td>王嘉佳</td>
+                        <td>已禁用</td>
+                        <td>
+                            <a href="#">删除评论</a>
+                            <a href="#">禁用</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input v-model="selectItem" value="5" class="check-item" type="checkbox">
+                        </td>
+                        <td>000005</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                        <td>4.2</td>
+                        <td>2016/10/08 20:20</td>
+                        <td>王嘉佳</td>
+                        <td>已禁用</td>
+                        <td>
+                            <a href="#">删除评论</a>
+                            <a href="#">禁用</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination content">
+            <a href="#" class="default-btn btn">批量删除</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>电子词典-敏感词管理</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/electronic.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script  src="js/vue-nav.js"></script>
+    <script src="js/electronic-hotWord.js"></script>
+</head>
+<body>
+<div class="electronic">
+    <div class="main">
+        <!--top-->
+        <div class="top">
+            <a href="#" class="aSelected">敏感词管理</a>
+            <a href="electronic-keyWord.html">关键词管理</a>
+        </div>
+        <!--mid-->
+        <div class="hotWord-top clearfix">
+            <input type="text" class="add" placeholder="请输入需要填写的词"/>
+            <button class="btn-newAdd">新增</button>
+            <button class="btn-allAdd">批量新增</button>
+        </div>
+        <!--bottom-->
+        <dl class="bottom">
+            <dd class="wrap_table">
+                <table class="table table-striped fixed-width">
+                    <thead>
+                    <tr>
+                        <th width="33.33%"><span>编号</span></th>
+                        <th width="33.33%"><span>内容</span></th>
+                        <th width="33.33%"><span>操作</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>0000001</span></td>
+                        <td><span>微信号</span></td>
+                        <td><span><a href="">修改</a>&nbsp;&nbsp;&nbsp;<a href="">删除</a></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>0000002</span></td>
+                        <td><span>代购</span></td>
+                        <td><span><a href="">修改</a>&nbsp;&nbsp;&nbsp;<a href="">删除</a></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>0000001</span></td>
+                        <td><span>淘宝</span></td>
+                        <td><span><a href="">修改</a>&nbsp;&nbsp;&nbsp;<a href="">删除</a></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <div id="app" class="page">
+                <vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>
+            </div>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

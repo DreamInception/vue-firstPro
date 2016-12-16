@@ -1,0 +1,10 @@
+button:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); opacity: 0.8; }
+
+.mask { width: 100%; height: 100%; background-color: #888888; position: absolute; top: 0; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20); opacity: 0.2; z-index: 99999; }
+
+.alertbar { background: #fff; border: 1px solid #d2d2d2; border-radius: 3px; z-index: 999999; position: absolute; padding: 30px; left: 50%; top: 50%; color: #666; }
+.alertbar .alernav { height: 28px; line-height: 28px; font-size: 14px; text-align: center; }
+.alertbar .alertest { font-size: 12px; margin: 20px 0 30px; text-align: center; }
+.alertbar .alertbtn { margin: 20px auto; }
+.alertbar .alertbtn .confirmbtn { width: 80px; height: 30px; color: #fff; font-size: 12px; padding: 0px 10px; border: 1px solid #616b88; border-radius: 8px; line-height: 30px; background-color: #616b88; text-align: center; vertical-align: middle; display: inline-block; cursor: pointer; border-radius: 3px; line-height: 25px; float: left; }
+.alertbar .alertbtn .cancelbtn { width: 80px; height: 30px; color: #666; font-size: 12px; padding: 0px 10px; border: 1px solid #d2d2d2; border-radius: 8px; line-height: 30px; background-color: #fff; text-align: center; vertical-align: middle; display: inline-block; cursor: pointer; border-radius: 3px; line-height: 25px; float: right; }

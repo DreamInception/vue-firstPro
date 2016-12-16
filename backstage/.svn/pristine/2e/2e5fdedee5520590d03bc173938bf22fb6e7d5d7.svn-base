@@ -1,0 +1,90 @@
+{
+  "status":"success",
+  "data":{
+    "menuList":[
+      {
+        "name":"资源管理",
+        "isShow":1,
+        "bgImage":"images/nav/left0.png",
+        "hoverImage":"images/nav/left0_hover.png",
+        "url":"",
+        "subnav":[
+
+        ]
+      },
+      {
+        "name":"用户管理",
+        "isShow":1,
+        "bgImage":"images/nav/left1.png",
+        "hoverImage":"images/nav/left1_hover.png",
+        "url":"",
+        "subnav":[
+
+        ]
+      },
+      {
+        "name":"评论管理",
+        "isShow":1,
+        "bgImage":"images/nav/left2.png",
+        "hoverImage":"images/nav/left2_hover.png",
+        "url":"account.html",
+        "subnav":[]
+      },
+      {
+        "name":"字典管理",
+        "isShow":1,
+        "bgImage":"images/nav/left3.png",
+        "hoverImage":"images/nav/left3_hover.png",
+        "url":"",
+        "subnav":[
+
+        ]
+      },
+      {
+        "name":"系统管理",
+        "isShow":1,
+        "bgImage":"images/nav/left4.png",
+        "hoverImage":"images/nav/left4_hover.png",
+        "url":"box.html",
+        "subnav":[
+
+        ]
+      },
+      {
+        "name":"推荐管理",
+        "isShow":1,
+        "bgImage":"images/nav/left5.png",
+        "hoverImage":"images/nav/left5_hover.png",
+        "url":"classroomAdmin.html",
+        "subnav":[]
+      },
+
+      {
+        "name":"订单管理",
+        "isShow":1,
+        "bgImage":"images/nav/left6.png",
+        "hoverImage":"images/nav/left6_hover.png",
+        "url":"",
+        "subnav":[
+
+        ]
+      },
+      {
+        "name":"宿舍管理",
+        "isShow":1,
+        "bgImage":"images/nav/left8.png",
+        "hoverImage":"images/nav/left8_hover.png",
+        "url":"dorm.html",
+        "subnav":[]
+      },
+      {
+        "name":"参数设置",
+        "isShow":0,
+        "bgImage":"images/nav/left7.png",
+        "hoverImage":"images/nav/left7_hover.png",
+        "url":"",
+        "subnav":[]
+      }
+    ]
+  }
+}

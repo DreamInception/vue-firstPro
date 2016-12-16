@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>推荐管理</title>
+    <link rel="stylesheet" href="js/plugins/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/order.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/jquery.selectbox/jquery.selectBox.min.js"></script>
+    <script src="js/plugins/datetimepicker/jquery.datetimepicker.min.js"></script>
+    <script src="js/public.js"></script>
+    <script src="js/recommend.js"></script>
+    <script  src="js/vuePage.js"></script>
+</head>
+<body>
+<div class="pad15">
+    <div class="main">
+        <!--top-->
+        <div class="top normal_block ">
+            <div class="title_big">推荐管理</div>
+        </div>
+        <!--mid-->
+        <dl class="order_tips recommend_tips normal_block">
+            <dd class="list_select clearfix">
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">请选择学段</option>
+                    <option value="1">学段1</option>
+                    <option value="2">学段2</option>
+                </select>
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">请选择学科</option>
+                    <option value="1">学科</option>
+                    <option value="2">学科</option>
+                </select>
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">请选择教材版本</option>
+                    <option value="1">教材版本</option>
+                    <option value="2">教材版本</option>
+                </select>
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">请选择册次</option>
+                    <option value="1">册次</option>
+                    <option value="2">册次</option>
+                </select>
+            </dd>
+            <dd class="buy_time clearfix">
+                <label>推荐时间</label>
+                <div class="fl">
+                    <input type="text" id="dates_start1" name="dates_start1" value="" placeholder="请选择起始时间">
+                    <span>至</span>
+                    <input type="text" id="dates_end1" name="dates_end1" value="" placeholder="请选择结束时间">
+                </div>
+            </dd>
+            <dd class="buyer clearfix">
+                <input type="text" class="buyer_write resetBorder" placeholder="请输入要搜索资源名"/>
+                <span class="btn-normal">搜索</span>
+            </dd>
+        </dl>
+        <!--bottom-->
+        <dl class="bottom">
+            <dd class="wrap_table">
+                <table class="table table-striped fixed-width">
+                    <thead>
+                        <tr>
+                            <th width="3%">
+                                <input class="check-all" type="checkbox">
+                            </th>
+                            <th width="8%">编号</th>
+                            <th >资源名称</th>
+                            <th width="8%">资源类型</th>
+                            <th width="8%">资源格式</th>
+                            <th width="8%">版权</th>
+                            <th width="8%">版本</th>
+                            <th width="10%">年级册次</th>
+                            <th width="8%">作者</th>
+                            <th width="8%">上传者</th>
+                            <th width="8%">推荐时间</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input v-model="selectItem" value="2" class="check-item" type="checkbox">
+                            </td>
+                            <td>000002</td>
+                            <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                            <td>课件</td>
+                            <td>文档</td>
+                            <td>永久</td>
+                            <td>北师大版</td>
+                            <td>八年级上册</td>
+                            <td>王佳佳</td>
+                            <td>王青</td>
+                            <td>2016/12/12 20:20</td>
+                            <td>
+                                <a href="#">查看</a>
+                                <a href="#">取消推荐</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <div id="app" class="page">
+                <div class="wrap_page_l">
+                    <a href="#" class="btn-normal mt15">批量取消</a>
+                    <div class="page_tips">共{{total_count}}条记录,{{cur}}/{{all}}页</div>
+                </div>
+                <vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>
+            </div>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

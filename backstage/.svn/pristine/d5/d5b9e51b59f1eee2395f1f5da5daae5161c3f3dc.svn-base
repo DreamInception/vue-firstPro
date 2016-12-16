@@ -1,0 +1,179 @@
+@import "compass";
+@import "normalize";
+@import "config";
+*{
+  box-sizing: border-box;
+}
+body{
+  background:$bg;
+  font-size: 14px;
+  font-family:"Microsoft YaHei";
+}
+a{
+  color:$fontColor;
+  text-decoration:none;
+}
+ul,li{
+  list-style: none;
+}
+dl,dt,dd,ul,li{
+  padding: 0;
+  margin: 0;
+}
+button{
+  border: none;
+  outline:none;
+}
+.clearfix{
+  @include pie-clearfix();
+}
+input{outline:none};
+.maincontent{
+  width: 1200px;
+  margin: 0px auto;
+}
+//头部样式
+header{
+  height:227px;
+  .headBar{
+    height: 80px;
+    background:$whiteColor;
+    .headCont{
+      width: 1200px;
+      margin: 0px auto;
+      .logo{
+        float: left;
+        margin-top: 12px;
+        span{
+          float: right;
+          font-size: 30px;
+          color: $titleColor;
+          margin:10px 0px 0px 25px;
+          font-weight: bold;
+        }
+      }
+      .title{
+        width: 360px;
+        float: left;
+        font-size: 24px;
+        text-align:center;
+        line-height: 80px;
+        margin-left: 120px;
+      }
+      .login{
+        width: 112px;
+        height:77px;
+        float:right;
+        border-top: 3px solid $whiteColor;
+        background:url("../images/icons/down.png") no-repeat left;
+        background-position:80px 35px;
+        .user{
+          width: 40px;
+          height: 40px;
+          background:$mainColor url("../images/icons/login.png") no-repeat center;
+          border-radius: 40px;
+          margin: 20px 10px 0px 26px;
+        }
+        &:hover{
+          border-top: 3px solid $mainColor;
+          background:url("../images/icons/down_hover.png") no-repeat left;
+          background-position:80px 35px;
+        }
+        .list{
+          position: relative;
+          margin-top: 17px;
+          background: $whiteColor;
+          z-index: 99;
+          display: none;
+          li{
+            font-size: 12px;
+            text-align:center;
+            cursor: pointer;
+            &:hover{
+              background:$tabBg;
+            }
+            a{
+              color: $greyColor;
+              &:hover{
+                color: $mainColor;
+              }
+            }
+
+            .libar{
+              width: 80px;
+              height: 35px;
+              line-height: 35px;
+              margin: 0px auto;
+              border-top: 1px solid $tabBg;
+            }
+            &:first-child{
+              .libar {
+                border-top: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .searchBar{
+      width: 1200px;
+      margin: 0px auto;
+      height: 130px;
+      background: url("../images/bg.png") no-repeat;
+      .searchBg{
+        width: 1200px;
+        float: left;
+        margin-top:45px;
+        .search{
+          width: 500px;
+          height: 40px;
+          background:$whiteColor;
+          border-radius:40px;
+          margin:0px auto;
+          .inputCss{
+            float: left;
+            @include iptcss(430px,40px);
+            margin-left: 20px;
+          }
+          .btn{
+            width: 28px;
+            height: 40px;
+            float: left;
+            background: url("../images/icons/search.png") no-repeat center;
+          }
+        }
+      }
+    }
+  }
+}
+//底部样式
+footer{
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  background:$footerColor;
+  bottom: 0px;
+  .footBar{
+    width: 1200px;
+    margin: 0px auto;
+    p{
+      float: left;
+      text-align:left;
+      line-height:30px;
+      color: $whiteColor;
+    }
+    .footList{
+      float: right;
+      li{
+        float: left;
+        padding-left:20px;
+        line-height:60px;
+        color: $whiteColor;
+        a{
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}
+

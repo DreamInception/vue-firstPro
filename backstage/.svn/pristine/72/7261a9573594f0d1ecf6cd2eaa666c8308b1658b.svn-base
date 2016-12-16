@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>后台管理-首页</title>
+    <base href="/backstage/"/>
+    <link rel="stylesheet" href="css/public.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="js/plugins/selectBox/jquery.selectbox.css">
+    <link rel="stylesheet" href="js/plugins/Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/selectBox/jquery.selectbox.js"></script>
+    <script src="js/frame.js"></script>
+</head>
+<body>
+<article class="resource-manage-container" id="resource-manage-container" v-cloak>
+    <ul class="choose-tabs">
+        <li><a href="javascript:;" class="default-tab">全部</a></li>
+        <li><a href="javascript:;" class="default-tab">已发布</a></li>
+        <li><a href="javascript:;" class="default-tab">待发布</a></li>
+        <li><a href="javascript:;" class="default-tab">已下架</a></li>
+        <li><a href="javascript:;" class="default-tab">已推荐</a></li>
+    </ul>
+    <section class="first-select-section">
+        <div class="selectbox selectbox_width200">
+            <input name="" value="" type="hidden" id="all-select">
+
+            <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span></div>
+            <div class="selectbox_value">全部</div>
+            <div class="selectbox_list selectbox_width200">
+                <div class="jian"></div>
+                <div class="selectbox_scroll_body">
+                    <div class="selectbox_scroll">
+                        <div></div>
+                    </div>
+                </div>
+                <ul class="selectbox_body">
+                    <li data-value="m.id" v-for="m in firstSelectList">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <input type="text" class="search-box" placeholder="请输入搜索的内容"/>
+        <button class="search-btn">搜索</button>
+    </section>
+    <section class="second-select-section">
+        <ul>
+            <li>
+                <span class="dl-mgl">学段选择</span>
+
+                <div class="selectbox selectbox_width200">
+                    <input name="" value="" type="hidden" id="period-select">
+
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span>
+                    </div>
+                    <div class="selectbox_value">全部</div>
+                    <div class="selectbox_list selectbox_width200">
+                        <div class="jian"></div>
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll">
+                                <div></div>
+                            </div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="m.id" v-for="m in firstSelectList">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span>版本</span>
+
+                <div class="selectbox selectbox_width200">
+                    <input name="" value="" type="hidden" id="version-select">
+
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span>
+                    </div>
+                    <div class="selectbox_value">全部</div>
+                    <div class="selectbox_list selectbox_width200">
+                        <div class="jian"></div>
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll">
+                                <div></div>
+                            </div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="m.id" v-for="m in firstSelectList">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span>年级</span>
+
+                <div class="selectbox selectbox_width200">
+                    <input name="" value="" type="hidden" id="grade-select">
+
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span>
+                    </div>
+                    <div class="selectbox_value">全部</div>
+                    <div class="selectbox_list selectbox_width200">
+                        <div class="jian"></div>
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll">
+                                <div></div>
+                            </div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="m.id" v-for="m in firstSelectList">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="dl-mgl">学科选择</span>
+
+                <div class="selectbox selectbox_width200">
+                    <input name="" value="" type="hidden" id="subject-select">
+
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span>
+                    </div>
+                    <div class="selectbox_value">全部</div>
+                    <div class="selectbox_list selectbox_width200">
+                        <div class="jian"></div>
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll">
+                                <div></div>
+                            </div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="m.id" v-for="m in firstSelectList">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <span class="dl-mgl">册次</span>
+
+                <div class="selectbox selectbox_width200">
+                    <input name="" value="" type="hidden" id="ceci-select">
+
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span>
+                    </div>
+                    <div class="selectbox_value">全部</div>
+                    <div class="selectbox_list selectbox_width200">
+                        <div class="jian"></div>
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll">
+                                <div></div>
+                            </div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="m.id" v-for="m in firstSelectList">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span class="dl-mgl">时间设置</span>
+                <input type="text"/>
+                <span>至</span>
+                <input type="text"/>
+                <button class="check-btn">查询</button>
+            </li>
+        </ul>
+    </section>
+    <section class="third-select-section">
+        <span>排序</span>
+        <ul>
+            <li>
+                <span>价格</span>
+                <a href="javascript:;" class="sort-asc"><img src="icon-caret-up" alt=""/></a>
+                <a href="javascript:;" class="sort-dec"><img src="icon-caret-down" alt=""/></a>
+            </li>
+            <li>
+                <span>评分</span>
+                <a href="javascript:;" class="sort-asc"><img src="icon-caret-up" alt=""/></a>
+                <a href="javascript:;" class="sort-dec"><img src="icon-caret-down" alt=""/></a>
+            </li>
+            <li>
+                <span>下载</span>
+                <a href="javascript:;" class="sort-asc"><img src="icon-caret-up" alt=""/></a>
+                <a href="javascript:;" class="sort-dec"><img src="icon-caret-down" alt=""/></a>
+            </li>
+            <li>
+                <span>浏览</span>
+                <a href="javascript:;" class="sort-asc"><img src="icon-caret-up" alt=""/></a>
+                <a href="javascript:;" class="sort-dec"><img src="icon-caret-down" alt=""/></a>
+            </li>
+            <button class="select-free-resource">筛选免费资源</button>
+        </ul>
+    </section>
+    <table class="table-data">
+        <thead>
+        <tr>
+            <th>
+                <input type="text" class="radio-box"/>
+            </th>
+            <th>编号</th>
+            <th>资源名称</th>
+            <th>所属学段</th>
+            <th>所属学科</th>
+            <th>资源类型</th>
+            <th>资源格式</th>
+            <th>版权</th>
+            <th>版本</th>
+            <th>年级册次</th>
+            <th>作者</th>
+            <th>上传者</th>
+            <th>上传时间</th>
+            <th>单价（元）</th>
+            <th>累计收益（元）</th>
+            <th>评分</th>
+            <th>浏览量</th>
+            <th>下载量</th>
+            <th>状态</th>
+            <th>推荐状态</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        </tbody>
+    </table>
+</article>
+</body>
+</html>

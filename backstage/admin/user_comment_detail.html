@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户评论明细</title>
+    <link rel="stylesheet" href="js/plugins/datetimepicker/jquery.datetimepicker.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/user.css">
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script src="js/plugins/datetimepicker/jquery.datetimepicker.min.js"></script>
+    <script src="js/plugins/jquery.selectbox/jquery.selectBox.min.js"></script>
+    <script src="js/user_comment_detail.js"></script>
+    <script  src="js/vuePage.js"></script>
+</head>
+
+<body>
+<div class="pad15">
+    <div class="main">
+        <!--top-->
+        <div class="wrap_table">
+            <table class="table table-striped fixed-width fixed-width-info">
+                <thead>
+                    <tr>
+                        <th width="8%">编号</th>
+                        <th width="8%">用户名</th>
+                        <th width="7%">性别</th>
+                        <th width="7%">生日</th>
+                        <th width="7%">教龄</th>
+                        <th width="10%">手机号</th>
+                        <th>邮箱</th>
+                        <th width="8%">学段</th>
+                        <th width="8%">学科</th>
+                        <th width="6%">下载次数</th>
+                        <th width="10%">付费总额（元）</th>
+                        <th width="8%">用户等级</th>
+                        <th width="12%">注册时间</th>
+                        <th width="8%">状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00001</td>
+                        <td>斯希望自</td>
+                        <td>女</td>
+                        <td>12/12</td>
+                        <td>3年</td>
+                        <td>18810795211</td>
+                        <td>sixiwangzi@163.com</td>
+                        <td>小学</td>
+                        <td>语文</td>
+                        <td>121</td>
+                        <td>3000</td>
+                        <td>普通</td>
+                        <td>2016/12/12 20:20</td>
+                        <td>正常</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--mid-->
+        <dl class="order_tips normal_block">
+            <dt class="normal-title">评论明细：</dt>
+            <dd class="buyer clearfix">
+                <select name="standard-dropdown" class="standard-dropdown wide">
+                    <option value="0" selected="selected">全部</option>
+                    <option value="1">订单编号</option>
+                    <option value="2">资源名称</option>
+                </select>
+                <input type="text" class="buyer_write ml15">
+                <span class="btn-normal">搜索</span>
+            </dd>
+        </dl>
+        <!--bottom-->
+        <dl class="bottom">
+            <dd class="wrap_table">
+                <table class="table table-striped w_100">
+                    <thead>
+                        <tr>
+                            <th width="10%">编号</th>
+                            <th width="14%">评论时间</th>
+                            <th width="28%">评论的资源名称</th>
+                            <th >评论内容</th>
+                            <th  width="10%">评分</th>
+                            <th width="10%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>000000001</td>
+                            <td>2016/12/12 20:21</td>
+                            <td>河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                            <td>好很好，河南省洛阳地区2014-2016年八年级上学期期中考试语文</td>
+                            <td>4分</td>
+                            <td><a href="#">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <div id="app" class="page">
+                <div class="wrap_page_l">
+                    <a href="#" class="btn-normal hide" >批量取消</a>
+                    <div class="page_tips">共{{total_count}}条记录,{{cur}}/{{all}}页</div>
+                </div>
+                <vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>
+            </div>
+        </dl>
+    </div>
+</div>
+</body>
+</html>

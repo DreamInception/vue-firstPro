@@ -1,0 +1,21 @@
+var school_id=4355;
+var user_id=3455;
+var serverUrl="http://192.168.1.241/alljson/";
+
+
+// 以下为数据
+var build_id=123,
+	level_id=465,
+	college_id=645,
+	course_id=3545,
+	year_id=645,
+	class_name=34,
+	role_id=345,
+	real_name=2324,
+	class_id=2324,
+	teacher_id=34435,
+	classroom_id=34555,
+	machine_id=547,
+	start_time=56767,
+	end_time=790,
+attend_machine_id=657;

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>电子词典-关键词管理</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/electronic.css">
+    <link rel="stylesheet" href="css/jquery.selectbox.css" />
+    <script src="js/plugins/jquery/dist/jquery.min.js"></script>
+    <script src="js/plugins/vue/dist/vue.min.js"></script>
+    <script language="javascript" src="js/jquery.selectbox.js"></script>
+    <script  src="js/vue-nav.js"></script>
+</head>
+<body>
+<div class="electronic">
+    <div class="main">
+        <!--top-->
+        <div class="top">
+            <a href="electronic-hotWord.html" >敏感词管理</a>
+            <a href="#" class="aSelected">关键词管理</a>
+        </div>
+        <!--mid-->
+        <div class="kewWord-top clearfix">
+            <div>
+                <span>学段选择</span>
+                <div class="fl selectbox selebar selectbox_width126" id="phasesubject1">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">全部</div></div>
+                    <div class="selectbox_list selectbox_width126">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">小学</li>
+                            <li data-value="0">初中</li>
+                            <li data-value="0">高中</li>
+                        </ul>
+                    </div>
+                </div>
+                <span>学科选择</span>
+                <div class="fl selectbox selebar selectbox_width126" id="phasesubject2">
+                    <input name="" value="" type="hidden">
+                    <div class="selectbox_arraw"><span class="selectbox_down"></span><span class="selectbox_up"></span></div>
+                    <div class="selectbox_value_box"><div class="selectbox_value">全部</div></div>
+                    <div class="selectbox_list selectbox_width126">
+                        <div class="selectbox_scroll_body">
+                            <div class="selectbox_scroll"><div></div></div>
+                        </div>
+                        <ul class="selectbox_body">
+                            <li data-value="0">语文</li>
+                            <li data-value="0">数学</li>
+                            <li data-value="0">化学</li>
+                            <li data-value="0">英语</li>
+                            <li data-value="0">体育</li>
+                        </ul>
+                    </div>
+                </div>
+            <div>
+                <input type="text" class="add" placeholder="请输入需要填写的词"/>
+                <button class="btn-newAdd">新增</button>
+            </div>
+        </div>
+        <!--bottom-->
+        <dl class="bottom">
+            <dd class="wrap_table">
+                <table class="table table-striped fixed-width">
+                    <thead>
+                    <tr>
+                        <th width="33.33%"><span>编号</span></th>
+                        <th width="33.33%"><span>内容</span></th>
+                        <th width="33.33%"><span>操作</span></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span>0000001</span></td>
+                        <td><span>微信号</span></td>
+                        <td><span><a href="">修改</a>&nbsp;&nbsp;&nbsp;<a href="">删除</a></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>0000002</span></td>
+                        <td><span>代购</span></td>
+                        <td><span><a href="">修改</a>&nbsp;&nbsp;&nbsp;<a href="">删除</a></span></td>
+                    </tr>
+                    <tr>
+                        <td><span>0000001</span></td>
+                        <td><span>淘宝</span></td>
+                        <td><span><a href="">修改</a>&nbsp;&nbsp;&nbsp;<a href="">删除</a></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </dd>
+            <div id="app" class="page">
+                <vue-nav :total_count="total_count" :cur="cur" :all="all" v-on:btnclick="listens" ></vue-nav>
+            </div>
+        </dl>
+    </div>
+</div>
+</body>
+</html>
