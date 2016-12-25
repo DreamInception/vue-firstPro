@@ -21,7 +21,6 @@ var tm = '<div class="page-bar clearfix">'+
     var navBar = Vue.extend({
         template: tm,
         props: ['cur', 'all','total_count'],
-        data: function(){},
         computed: {
             indexs: function(){
               var left = 1;
