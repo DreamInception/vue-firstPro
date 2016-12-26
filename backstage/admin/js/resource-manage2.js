@@ -21,7 +21,10 @@ $(function () {
         },
         components:{
             'vue-nav': Vnav,
-            'first-link-selectbox': Vflsb
+            'first-link-selectbox': Vflsb,
+            'second-link-selectbox': Vslsb,
+            'third-link-selectbox': Vtlsb,
+            'fourth-link-selectbox': Vflsb
         },
         methods:{
 
